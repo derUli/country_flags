@@ -1,0 +1,8 @@
+{
+   "id" : "gosquared_flags",
+   "version" : "2.6",
+   "description" : "GoSquared's Flag Icon Set",
+   "categories" : ["flags", "i18n"],
+   "compatible_from" : "2017.3",
+   "dependencies" : []
+}
