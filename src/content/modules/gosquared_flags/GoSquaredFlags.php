@@ -23,4 +23,25 @@ class GoSquaredFlags extends Controller
         $text = nl2br($text);
         return $text;
     }
+
+    public function getPathByIsoCode($isoCode, $size, $style = "flat")
+    {
+        $path = "flags-iso/" . $style . "/" . $size . "/" . $name;
+        $path = ModuleHelper::buildModuleRessourcePath($this->moduleName, $path);
+        if (! file_exists($path)) {
+            return null;
+        }
+        return $path;
+    }
+
+    public function getPathByCountryName($name, $size, $style = "flat")
+    {
+        $path = "flags/" . $style . "/" . $size . "/" . $name;
+        
+        $path = ModuleHelper::buildModuleRessourcePath($this->moduleName, $path);
+        if (! file_exists($path)) {
+            return null;
+        }
+        return $path;
+    }
 }
