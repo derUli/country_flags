@@ -26,7 +26,7 @@ class GoSquaredFlags extends Controller
 
     public function getPathByIsoCode($isoCode, $size, $style = "flat")
     {
-        $path = "flags-iso/" . $style . "/" . $size . "/" . $name;
+        $path = "flags-iso/" . $style . "/" . $size . "/" . $isoCode;
         $path = ModuleHelper::buildModuleRessourcePath($this->moduleName, $path);
         if (! file_exists($path)) {
             return null;
